@@ -15,6 +15,7 @@ form.addEventListener('submit', (event) =>{
     const c = parseFloat(linesDataTransformed['c']);
     const d = parseFloat(linesDataTransformed['d']);
     const qmax = (a-c)/(2*b);
+    const qmaxrev = a/(2*b);
     
     
     if ((a>0) ||(b>0) || (c>0)|| (d>=0) ) {
@@ -51,7 +52,6 @@ form.addEventListener('submit', (event) =>{
         P = ${a} - ${b*qmax}
         P = ${a - (b*qmax) }
         
-
         The profit relating to this quantity is:
 
         Profit = -${b}Q^2 + ${a-c}Q -${d}
@@ -59,6 +59,36 @@ form.addEventListener('submit', (event) =>{
         Profit = ${(-1)*b}${qmax*qmax} + ${(a-c)*qmax} -${d}
         Profit = ${((-1)*b) *(qmax*qmax)} + ${ ((a-c)*qmax) - d} 
         Profit = ${  (((-1)*b) *(qmax*qmax)) + (((a-c)*qmax) - d) }
+
+        ___________________________
+
+        Suppose instead we wanted to maximise Total Revenue (lets call Total Revenue R)
+        TR = PQ
+        R = (a - bQ)Q
+        R = (${a} - ${b}Q)Q
+        R = ${a}Q - ${b}Q^2
+
+        Differentiate with respect (wrt) Q to get:
+
+        dR/dQ = ${a} -2*${b}Q
+
+        Set dR/dQ = 0 and solve for Q:
+
+        0 = ${a} -2*${b}Q
+        ${a} = 2*${b}Q
+        ${2*b}Q = ${a}
+        Q= ${a/(2*b)}
+
+        The above Quantity produced maximises revenue.
+        The corresponding revenue for the quantity above is:
+
+        
+        R = (a - bQ)Q
+        R = (${a} - ${b}Q)Q
+        R = (${a} - ${b}${qmaxrev})*${qmaxrev}
+        R = (${a} - ${b*qmaxrev})*${qmaxrev}
+        R = (${a- (b*qmaxrev)})*${qmaxrev}
+        R = ${ (a- (b*qmaxrev)) *(qmaxrev)}
 
         `
  
