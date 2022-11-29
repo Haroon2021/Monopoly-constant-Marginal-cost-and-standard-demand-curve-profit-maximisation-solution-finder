@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">   
     <title>Monopoly constant MC and standard demand curve</title>
 </head>
 <body>
@@ -14,16 +15,37 @@
     <br><br>
     The constant marginal cost function is:
     <br><br>
-    C(Q) = cQ+ d
+    TC(Q) = cQ+ d
     <br><br>    
     Please note the following restrictions should be adhered to 
     <br><br>
-    a > 0, b < 0, c > 0, and d >= 0
+    a > 0, b > 0, c > 0, and d >= 0
     <br><br>
     Please enter values for a through to d
     <br><br>
 
-    
+    <form>
+        <label id="avalue">Value for a </label>
+        <input type="text" id="aforlinearequation" name="a"><br><br>
+
+        <label id="bvalue">Value for b </label>
+        <input type="text" id="bforlinearequation" name="b"><br><br>
+
+        <label id="cvalue">Value for c </label>
+        <input type="text" id="cforlinearequation" name="c"><br><br>
+
+        <label id="dvalue">Value for d </label>
+        <input type="text" id="dforlinearequation" name="d"><br><br>
+
+        <button type="submit" id = "calculateButton">Calculate</button>
+    </form>
+
+    <div class="errorhanger"></div>
+
+    <div class="answer"></div>
+
+
+    <script src="app.js" defer ></script>
     
 </body>
 </html>
