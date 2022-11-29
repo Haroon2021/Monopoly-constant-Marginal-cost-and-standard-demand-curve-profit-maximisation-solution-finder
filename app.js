@@ -60,7 +60,7 @@ form.addEventListener('submit', (event) =>{
         Profit = ${((-1)*b) *(qmax*qmax)} + ${ ((a-c)*qmax) - d} 
         Profit = ${  (((-1)*b) *(qmax*qmax)) + (((a-c)*qmax) - d) }
 
-        ___________________________
+        ___________________________ ___________________________ ___________________________
 
         Suppose instead we wanted to maximise Total Revenue (lets call Total Revenue R)
         TR = PQ
